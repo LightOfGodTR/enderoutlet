@@ -1,0 +1,66 @@
+:
+source .env
+npm start
+
+> rest-express@1.0.0 start
+> NODE_ENV=production tsx server/index.ts
+
+🐘 Using PostgreSQL driver (Local/VPS environment)
+EMAIL_USER and EMAIL_PASS environment variables are required
+8:33:32 AM [express] ✅ Server serving on 0.0.0.0:5000
+8:33:32 AM [express] 🌍 Production server accessible publicly on port 5000
+🔗 New database connection established
+🔗 New database connection established
+Error initializing default data: error: relation "users" does not exist
+    at /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/node_modules/src/node-postgres/session.ts:104:19)
+    at async DatabaseStorage.getUserByEmail (/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/storage.ts:468:20)
+    at async DatabaseStorage.initializeDefaultData (/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/storage.ts:328:28) {
+  length: 105,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '233',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1449',
+  routine: 'parserOpenTable'
+}
+/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/node_modules/pg-pool/index.js:45
+    Error.captureStackTrace(err)
+          ^
+
+error: relation "navigation_items" does not exist
+    at /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/node_modules/src/node-postgres/session.ts:104:19)
+    at async DatabaseStorage.initializeNavigationItems (/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/storage.ts:924:27) {
+  length: 115,
+  severity: 'ERROR',
+  code: '42P01',
+  detail: undefined,
+  hint: undefined,
+  position: '91',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_relation.c',
+  line: '1449',
+  routine: 'parserOpenTable'
+}
+
+Node.js v20.19.5

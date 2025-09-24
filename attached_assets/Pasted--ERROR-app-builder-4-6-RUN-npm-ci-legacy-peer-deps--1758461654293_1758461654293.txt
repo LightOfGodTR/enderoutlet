@@ -1,0 +1,55 @@
+ => ERROR [app builder 4/6] RUN npm ci --legacy-peer-deps                                                          0.8s
+------
+ > [app builder 4/6] RUN npm ci --legacy-peer-deps:
+0.744 npm error code EJSONPARSE
+0.745 npm error path /app/package.json
+0.745 npm error JSON.parse Expected ',' or '}' after property value in JSON at position 4041 while parsing near "...rror\": \"^3.4.0\"\n    \"tsx\": \"^4.19.1\",\n  ..."
+0.745 npm error JSON.parse Failed to parse JSON data.
+0.745 npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
+0.745 npm error A complete log of this run can be found in: /root/.npm/_logs/2025-09-21T13_33_45_658Z-debug-0.log
+------
+WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+
+WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+
+Dockerfile:6
+
+--------------------
+
+   4 |     WORKDIR /app
+
+   5 |     COPY package*.json ./
+
+   6 | >>> RUN npm ci --legacy-peer-deps
+
+   7 |     COPY . .
+
+   8 |
+
+--------------------
+
+target app: failed to solve: process "/bin/sh -c npm ci --legacy-peer-deps" did not complete successfully: exit code: 1
+
+Error response from daemon: No such container: arcelik-ecommerce
+curl: (7) Failed to connect to localhost port 5000 after 0 ms: Couldn't connect to server
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretR# # Port 5000'i aç
+sudo ufw allow 5000
+sudo ufw reload
+
+# Test et
+curl http://84.201.5.238:5000/health
+Rules updated
+Rules updated (v6)
+Firewall not enabled (skipping reload)
+curl: (7) Failed to connect to 84.201.5.238 port 5000 after 0 ms: Couldn't connect to server
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretR# ^CTest et
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretR# # Port 5000'i aç
+sudo ufw allow 5000
+sudo ufw reload
+
+# Test et
+curl http://84.201.5.238:5000/health
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+Firewall not enabled (skipping reload)
+curl: (7) Failed to connect to 84.201.5.238 port 5000 after 0 ms: Couldn't connect to server

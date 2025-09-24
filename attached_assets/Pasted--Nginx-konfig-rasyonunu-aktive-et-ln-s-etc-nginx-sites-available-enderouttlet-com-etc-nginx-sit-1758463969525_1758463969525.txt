@@ -1,0 +1,32 @@
+# Nginx konfigürasyonunu aktive et
+ln -s /etc/nginx/sites-available/enderouttlet.com /etc/nginx/sites-enabled/
+nginx -t && systemctl reload nginx
+-bash: /etc/nginx/sites-available/enderouttlet.com: No such file or directory
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/': No such file or directory
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretR# # Düzeltilmiş docker-compose ile restart
+docker compose down
+docker compose up -d
+
+# Logs kontrol et
+docker logs -f arcelik-ecommerce
+[+] Running 4/4
+ ✔ Container arcelik-ecommerce   Removed                                                                          10.2s
+ ✔ Container arcelik-migrations  Removed                                                                           0.6s
+ ✔ Container arcelik-database    Removed                                                                           0.3s
+ ✔ Network arcelik-network       Removed                                                                           0.1s
+[+] Running 4/4
+ ✔ Network arcelik-network       Created                                                                           0.0s
+ ✔ Container arcelik-database    Healthy                                                                          11.5s
+ ✔ Container arcelik-migrations  Exited                                                                           35.6s
+ ✔ Container arcelik-ecommerce   Started                                                                          35.7s
+🚀 Production mode - serving static files
+🐳 Using PostgreSQL driver (Docker environment)
+EMAIL_USER and EMAIL_PASS environment variables are required
+✅ API routes registered
+✅ Arçelik E-commerce running on http://0.0.0.0:5000
+🌍 Environment: production
+📅 Started: 2025-09-21T14:12:32.942Z
+🔗 New database connection established
+🔗 New database connection established

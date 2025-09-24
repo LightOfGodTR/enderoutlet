@@ -1,0 +1,57 @@
+Dear Emre,
+
+Thank you for contacting UltaHost.
+
+Could you please review the logs below and the npm build from your end?
+
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaret# cat app.log 2>/dev/null || echo "No app.log file"
+nohup: ignoring input
+node:internal/modules/esm/resolve:873
+  throw new ERR_MODULE_NOT_FOUND(packageİsim, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'ws' imported from /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaret/dist/index.js
+    at packageResolve (node:internal/modules/esm/resolve:873:9)
+    at moduleResolve (node:internal/modules/esm/resolve:946:18)
+    at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.19.5
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaret# tail -20 app.log 2>/dev/null || echo "No recent logs"
+nohup: ignoring input
+node:internal/modules/esm/resolve:873
+  throw new ERR_MODULE_NOT_FOUND(packageİsim, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'ws' imported from /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaret/dist/index.js
+    at packageResolve (node:internal/modules/esm/resolve:873:9)
+    at moduleResolve (node:internal/modules/esm/resolve:946:18)
+    at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:708:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:657:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:640:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:264:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:168:49) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.19.5
+
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaret# npm run build
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+sh: 1: vite: not found
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaret#
+Best Regards,
+Nelson
+L2 Customer Support Team
+
+    

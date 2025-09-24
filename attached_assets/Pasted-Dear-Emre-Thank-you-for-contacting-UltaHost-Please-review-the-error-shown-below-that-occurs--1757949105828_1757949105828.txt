@@ -1,0 +1,57 @@
+Dear Emre,
+
+Thank you for contacting UltaHost.
+
+Please review the error shown below that occurs during the Vite installation. Kindly check on your end.
+
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaret# npm install vite@latest
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: vite@7.1.5
+npm error Found: @types/node@20.16.11
+npm error node_modules/@types/node
+npm error   @types/node@"*" from @types/bcrypt@6.0.0
+npm error   node_modules/@types/bcrypt
+npm error     @types/bcrypt@"^6.0.0" from the root project
+npm error   @types/node@"*" from @types/body-parser@1.19.6
+npm error   node_modules/@types/body-parser
+npm error     @types/body-parser@"*" from @types/express@4.17.21
+npm error     node_modules/@types/express
+npm error       @types/express@"*" from @types/compression@1.8.1
+npm error       node_modules/@types/compression
+npm error         @types/compression@"^1.8.1" from the root project
+npm error       8 more (@types/connect-pg-simple, @types/express-session, ...)
+npm error   12 more (@types/compression, @types/connect, ...)
+npm error
+npm error Could not resolve dependency:
+npm error peerOptional @types/node@"^20.19.0 || >=22.12.0" from vite@7.1.5
+npm error node_modules/vite
+npm error   dev vite@"7.1.5" from the root project
+npm error   peer vite@"^5.2.0 || ^6 || ^7" from @tailwindcss/vite@4.1.13
+npm error   node_modules/@tailwindcss/vite
+npm error     dev @tailwindcss/vite@"^4.1.3" from the root project
+npm error   1 more (@vitejs/plugin-react)
+npm error
+npm error Conflicting peer dependency: @types/node@24.4.0
+npm error node_modules/@types/node
+npm error   peerOptional @types/node@"^20.19.0 || >=22.12.0" from vite@7.1.5
+npm error   node_modules/vite
+npm error     dev vite@"7.1.5" from the root project
+npm error     peer vite@"^5.2.0 || ^6 || ^7" from @tailwindcss/vite@4.1.13
+npm error     node_modules/@tailwindcss/vite
+npm error       dev @tailwindcss/vite@"^4.1.3" from the root project
+npm error     1 more (@vitejs/plugin-react)
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /root/.npm/_logs/2025-09-15T15_00_34_193Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /root/.npm/_logs/2025-09-15T15_00_34_193Z-debug-0.log
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaret#
+Best Regards,
+Nelson
+L2 Customer Support Team

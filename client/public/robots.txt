@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+
+# SEO önemli sayfalar
+Allow: /products
+Allow: /products/*
+Allow: /category/*
+Allow: /corporate
+Allow: /contact
+
+# Admin ve gizli sayfalar
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/*
+Disallow: /login
+Disallow: /register
+Disallow: /account
+Disallow: /checkout
+Disallow: /cart
+Disallow: /favorites
+Disallow: /*?*
+
+# Sitemap konumu
+Sitemap: https://enderoutlet.com/sitemap.xml
+
+# Crawl hızı
+Crawl-delay: 1
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

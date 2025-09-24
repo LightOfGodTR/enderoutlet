@@ -1,0 +1,400 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global reset for mobile fullscreen */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Full width container breakout */
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Custom drag behavior for product cards */
+.product-cards-scroll {
+  touch-action: pan-x;
+}
+.product-cards-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(0 100% 45%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(0 0% 96%);
+  --secondary-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(0 0% 96%);
+  --muted-foreground: hsl(0 0% 45%);
+  --accent: hsl(0 0% 96%);
+  --accent-foreground: hsl(210 25% 7.8431%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(0 0% 90%);
+  --input: hsl(0 0% 96%);
+  --ring: hsl(0 100% 45%);
+  --chart-1: hsl(0 100% 45%);
+  --chart-2: hsl(0 0% 60%);
+  --chart-3: hsl(0 0% 40%);
+  --chart-4: hsl(0 0% 20%);
+  --chart-5: hsl(0 0% 10%);
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(210 25% 7.8431%);
+  --sidebar-primary: hsl(0 100% 45%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(0 0% 96%);
+  --sidebar-accent-foreground: hsl(210 25% 7.8431%);
+  --sidebar-border: hsl(0 0% 90%);
+  --sidebar-ring: hsl(0 100% 45%);
+  --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(0 0% 3.9%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(0 0% 3.9%);
+  --card-foreground: hsl(0 0% 98%);
+  --popover: hsl(0 0% 3.9%);
+  --popover-foreground: hsl(0 0% 98%);
+  --primary: hsl(0 100% 50%);
+  --primary-foreground: hsl(0 0% 9%);
+  --secondary: hsl(0 0% 14.9%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(0 0% 14.9%);
+  --muted-foreground: hsl(0 0% 63.9%);
+  --accent: hsl(0 0% 14.9%);
+  --accent-foreground: hsl(0 0% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(0 0% 14.9%);
+  --input: hsl(0 0% 14.9%);
+  --ring: hsl(0 100% 50%);
+  --chart-1: hsl(0 100% 50%);
+  --chart-2: hsl(0 0% 60%);
+  --chart-3: hsl(0 0% 40%);
+  --chart-4: hsl(0 0% 20%);
+  --chart-5: hsl(0 0% 10%);
+  --sidebar: hsl(0 0% 3.9%);
+  --sidebar-foreground: hsl(0 0% 98%);
+  --sidebar-primary: hsl(0 100% 50%);
+  --sidebar-primary-foreground: hsl(0 0% 9%);
+  --sidebar-accent: hsl(0 0% 14.9%);
+  --sidebar-accent-foreground: hsl(0 0% 98%);
+  --sidebar-border: hsl(0 0% 14.9%);
+  --sidebar-ring: hsl(0 100% 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+/* Custom utilities for product cards */
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Custom Arçelik-inspired styles */
+.hero-slider {
+  background: linear-gradient(135deg, hsl(0 100% 45%) 0%, hsl(0 100% 35%) 100%);
+}
+
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.energy-badge {
+  background: linear-gradient(45deg, #4ade80, #22c55e);
+  color: white;
+  font-weight: 600;
+}
+
+.discount-badge {
+  background: hsl(0 100% 45%);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: hsl(0 100% 45%);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: hsl(0 100% 40%);
+  transform: translateY(-1px);
+}
+
+.mobile-menu {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.search-overlay {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cart-panel {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.cart-panel.open {
+  transform: translateX(0);
+}
+
+/* Mobile specific styles for better touch experience */
+@media (max-width: 768px) {
+  .mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+
+  /* Mobile scrolling improvements */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Mobile touch targets - minimum 44px for accessibility */
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Mobile spacing improvements */
+  .mobile-padding {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Mobile text sizing for better readability */
+  .mobile-text-sm {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Mobile button improvements */
+  .btn-mobile {
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    min-height: 44px;
+  }
+
+  /* Product card mobile optimizations */
+  .product-card:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Improve mobile form elements */
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Better mobile typography */
+  h1 { font-size: 1.5rem; line-height: 1.3; }
+  h2 { font-size: 1.25rem; line-height: 1.3; }
+  h3 { font-size: 1.125rem; line-height: 1.3; }
+  
+  p, span, div {
+    line-height: 1.5;
+  }
+}
+
+/* Ensure consistent mobile experience - no hover effects on touch devices */
+@media (hover: none) {
+  .hover\:shadow-lg:hover {
+    box-shadow: none;
+  }
+  
+  .group:hover .group-hover\:text-primary {
+    color: inherit;
+  }
+  
+  .btn-primary:hover {
+    transform: none;
+  }
+  
+  .product-card:hover {
+    transform: none;
+  }
+}
+
+/* Safe area adjustments for devices with notches */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Better scrollbar styling for admin textarea elements */
+textarea {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(0 0% 80%) transparent;
+}
+
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 80%);
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: hsl(0 0% 60%);
+}
+
+/* Admin panel improvements */
+.admin-textarea {
+  resize: vertical;
+  min-height: 80px;
+  scrollbar-width: thin;
+}
+
+/* Ensure proper scrolling in constrained containers */
+.scroll-container {
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 70%);
+  border-radius: 3px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: hsl(0 0% 50%);
+}
+
+/* Z-index fixes for dropdowns in modals/dialogs */
+[data-radix-popper-content-wrapper] {
+  z-index: 9999 !important;
+}
+
+[data-radix-select-content] {
+  z-index: 9999 !important;
+}
+
+[data-radix-dropdown-menu-content] {
+  z-index: 9999 !important;
+}
+
+/* Specific fixes for select content in dialogs */
+.z-\[70\] {
+  z-index: 70 !important;
+}
+
+.z-\[9999\] {
+  z-index: 9999 !important;
+}
+
+/* Override any conflicting z-index values for Radix components in modals */
+[data-state="open"][data-radix-select-content],
+[data-state="open"][data-radix-dropdown-menu-content] {
+  z-index: 9999 !important;
+}
+
+/* Ensure dropdown menus always appear above dialogs and modals */
+[data-state="open"][role="listbox"],
+[data-state="open"][role="menu"] {
+  z-index: 9999 !important;
+}

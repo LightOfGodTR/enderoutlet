@@ -1,0 +1,23 @@
+NODE_ENV=production PORT=5000 pm2 start "npm start" --name beyazticaret
+[TAILING] Tailing last 20 lines for [all] processes (change the value with --lines option)
+/root/.pm2/pm2.log last 20 lines:
+PM2        | 2025-09-22T16:37:44: PM2 log: App [beyazticaret:0] online
+PM2        | 2025-09-22T16:37:44: PM2 log: App [beyazticaret:0] exited with code [1] via signal [SIGINT]
+PM2        | 2025-09-22T16:37:44: PM2 log: App [beyazticaret:0] starting in -fork mode-
+PM2        | 2025-09-22T16:37:44: PM2 log: App [beyazticaret:0] online
+PM2        | 2025-09-22T16:37:45: PM2 log: App [beyazticaret:0] exited with code [1] via signal [SIGINT]
+PM2        | 2025-09-22T16:37:45: PM2 log: App [beyazticaret:0] starting in -fork mode-
+PM2        | 2025-09-22T16:37:45: PM2 log: App [beyazticaret:0] online
+PM2        | 2025-09-22T16:37:46: PM2 log: App [beyazticaret:0] exited with code [1] via signal [SIGINT]
+PM2        | 2025-09-22T16:37:46: PM2 log: App [beyazticaret:0] starting in -fork mode-
+PM2        | 2025-09-22T16:37:46: PM2 log: App [beyazticaret:0] online
+PM2        | 2025-09-22T16:37:47: PM2 log: App [beyazticaret:0] exited with code [1] via signal [SIGINT]
+PM2        | 2025-09-22T16:37:47: PM2 log: App [beyazticaret:0] starting in -fork mode-
+PM2        | 2025-09-22T16:37:47: PM2 log: App [beyazticaret:0] online
+PM2        | 2025-09-22T16:37:47: PM2 log: App [beyazticaret:0] exited with code [1] via signal [SIGINT]
+PM2        | 2025-09-22T16:37:47: PM2 log: App [beyazticaret:0] starting in -fork mode-
+PM2        | 2025-09-22T16:37:47: PM2 log: App [beyazticaret:0] online
+PM2        | 2025-09-22T16:37:48: PM2 log: App [beyazticaret:0] exited with code [1] via signal [SIGINT]
+PM2        | 2025-09-22T16:37:48: PM2 log: Script /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/index.ts had too many unstable restarts (16). Stopped. "errored"
+PM2        | 2025-09-22T17:33:29: PM2 log: Stopping app:beyazticaret id:0
+PM2        | 2025-09-22T17:33:29: PM2 error: app=beyazticaret id=0 does not have a pid

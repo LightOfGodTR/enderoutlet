@@ -1,0 +1,53 @@
+^C
+root@srv:/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1# # 1️⃣ Önce PM2'yi durdur
+pm2 stop beyazticaret
+pm2 delete beyazticaret
+
+# 2️⃣ .env dosyası kontrol et
+cd /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1
+ls -la .env
+
+# 3️⃣ .env dosyası oluştur/düzelt
+cat > .env << 'EOF'
+NODE_ENV=production
+PORT=5000
+DATABASE_URL=postgresql://beyazticaret_admin:beyazticaret2024!@localhost:5432/beyazticaret_db
+SESSION_SECRET=beyazticaret_ultra_secure_session_key_2024_production
+PUBLIC_OBJECT_SEARCH_PATHS=/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/public/uploads
+HOST=0.0.0.0
+EOF
+
+# 4️⃣ .env dosyası izinlerini ayarla
+chmod 644 .env
+
+# 5️⃣ Environment variables test et
+source .env
+echo $DATABASE_URL
+
+# 6️⃣ PM2 ecosystem dosyası oluştur
+cat > ecosystem.config.js << 'EOF'
+module.exports = {
+  apps: [{
+    name: 'beyazticaret',
+pm2 logs beyazticaret --lines 10ullanarak)
+[PM2][ERROR] Process or Namespace beyazticaret not found
+[PM2][ERROR] Process or Namespace beyazticaret not found
+-rw-r--r-- 1 enderouttlet www-data 320 Sep 22 17:33 .env
+postgresql://beyazticaret_admin:beyazticaret2024!@localhost:5432/beyazticaret_db
+[PM2][ERROR] File ecosystem.config.js malformated
+ReferenceError: module is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/ecosystem.config.js:1:1
+    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:437:37)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:389:47)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1363:24)
+    at Module._compile (node:internal/modules/cjs/loader:1503:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Module.require (node:internal/modules/cjs/loader:1289:19)
+    at require (node:internal/modules/helpers:182:18)
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+[TAILING] Tailing last 10 lines for [beyazticaret] process (change the value with --lines option)

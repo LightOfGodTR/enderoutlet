@@ -1,0 +1,50 @@
+ => ERROR [builder 6/6] RUN npm run build                                                                          0.8s
+------
+ > [builder 6/6] RUN npm run build:
+0.441
+0.441 > rest-express@1.0.0 build
+0.441 > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --external:vite
+0.441
+0.788 failed to load config from /app/vite.config.ts
+0.788 error during build:
+0.788 file:///app/vite.config.ts.timestamp-1758188314813-fe1bf54ee2575.mjs:5
+0.788 import cartographer from "file:///app/node_modules/@replit/vite-plugin-cartographer/dist/index.mjs";
+0.788        ^^^^^^^^^^^^
+0.788 SyntaxError: The requested module 'file:///app/node_modules/@replit/vite-plugin-cartographer/dist/index.mjs' does not provide an export named 'default'
+0.788     at ModuleJob._instantiate (node:internal/modules/esm/module_job:213:21)
+0.788     at async ModuleJob.run (node:internal/modules/esm/module_job:320:5)
+0.788     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+0.788     at async loadConfigFromBundledFile (file:///app/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:66974:15)
+0.788     at async loadConfigFromFile (file:///app/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:66815:24)
+0.788     at async resolveConfig (file:///app/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:66415:24)
+0.788     at async build (file:///app/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:65502:18)
+0.788     at async CAC.<anonymous> (file:///app/node_modules/vite/dist/node/cli.js:829:5)
+------
+WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+
+Dockerfile:18
+
+--------------------
+
+  16 |
+
+  17 |     # Build the application (requires devDependencies)
+
+  18 | >>> RUN npm run build
+
+  19 |
+
+  20 |     # Production Stage
+
+--------------------
+
+failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+
+⏳ Waiting for services to be healthy...
+🗄️ Initializing database...
+Error response from daemon: No such container: arcelik-ecommerce
+Database initialization attempted
+📊 Checking container status...
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+✅ Deployment completed!
+🌐 Site should be available at: http://localhost:5000

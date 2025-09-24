@@ -1,0 +1,52 @@
+/root/.pm2/logs/beyazticaret-out.log last 50 lines:
+/root/.pm2/logs/beyazticaret-error.log last 50 lines:
+0|beyaztic |
+0|beyaztic | Node.js v20.19.5
+0|beyaztic | /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/db.ts:11
+0|beyaztic |   throw new Error(
+0|beyaztic |         ^
+0|beyaztic |
+0|beyaztic |
+0|beyaztic | Error: DATABASE_URL environment variable is required. Please set it in your environment or .env file.
+0|beyaztic |     at <anonymous> (/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/db.ts:11:9)
+0|beyaztic |     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+0|beyaztic |     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+0|beyaztic |     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+0|beyaztic |
+0|beyaztic | Node.js v20.19.5
+0|beyaztic | /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/db.ts:11
+0|beyaztic |   throw new Error(
+0|beyaztic |         ^
+0|beyaztic |
+0|beyaztic |
+0|beyaztic | Error: DATABASE_URL environment variable is required. Please set it in your environment or .env file.
+0|beyaztic |     at <anonymous> (/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/db.ts:11:9)
+0|beyaztic |     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+0|beyaztic |     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+0|beyaztic |     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+0|beyaztic |
+0|beyaztic | Node.js v20.19.5
+0|beyaztic | /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/db.ts:11
+0|beyaztic |   throw new Error(
+0|beyaztic |         ^
+0|beyaztic |
+0|beyaztic |
+0|beyaztic | Error: DATABASE_URL environment variable is required. Please set it in your environment or .env file.
+0|beyaztic |     at <anonymous> (/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/db.ts:11:9)
+0|beyaztic |     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+0|beyaztic |     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+0|beyaztic |     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+0|beyaztic |
+0|beyaztic | Node.js v20.19.5
+0|beyaztic | /home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/db.ts:11
+0|beyaztic |   throw new Error(
+0|beyaztic |         ^
+0|beyaztic |
+0|beyaztic |
+0|beyaztic | Error: DATABASE_URL environment variable is required. Please set it in your environment or .env file.
+0|beyaztic |     at <anonymous> (/home/enderouttlet/web/enderouttlet.com/public_html/node/BeyazTicaretV1/server/db.ts:11:9)
+0|beyaztic |     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+0|beyaztic |     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+0|beyaztic |     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+0|beyaztic |
+0|beyaztic | Node.js v20.19.5

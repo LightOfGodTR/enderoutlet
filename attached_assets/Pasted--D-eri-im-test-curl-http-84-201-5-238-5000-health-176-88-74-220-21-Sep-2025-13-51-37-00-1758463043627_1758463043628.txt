@@ -1,0 +1,37 @@
+# Dış erişim test
+curl http://84.201.5.238:5000/health
+176.88.74.220 - - [21/Sep/2025:13:51:37 +0000] "GET /api/cart HTTP/1.1" 401 29 "http://84.201.5.238:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+176.88.74.220 - - [21/Sep/2025:13:51:37 +0000] "GET /api/auth/me HTTP/1.1" 401 29 "http://84.201.5.238:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+🔗 New database connection established
+🔗 New database connection established
+Error searching for public object: Error: PUBLIC_OBJECT_SEARCH_PATHS not set. Create a bucket in 'Object Storage' tool and set PUBLIC_OBJECT_SEARCH_PATHS env var (comma-separated paths).
+    at ObjectStorageService.getPublicObjectSearchPaths (/app/server/objectStorage.ts:50:13)
+    at ObjectStorageService.searchPublicObject (/app/server/objectStorage.ts:72:35)
+    at <anonymous> (/app/server/routes.ts:1806:47)
+176.88.74.220 - - [21/Sep/2025:13:51:37 +0000] "GET /public-objects/uploads/placeholder-1200x500.jpg HTTP/1.1" 500 33 "http://84.201.5.238:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+Error searching for public object: Error: PUBLIC_OBJECT_SEARCH_PATHS not set. Create a bucket in 'Object Storage' tool and set PUBLIC_OBJECT_SEARCH_PATHS env var (comma-separated paths).
+    at ObjectStorageService.getPublicObjectSearchPaths (/app/server/objectStorage.ts:50:13)
+    at ObjectStorageService.searchPublicObject (/app/server/objectStorage.ts:72:35)
+    at <anonymous> (/app/server/routes.ts:1806:47)
+176.88.74.220 - - [21/Sep/2025:13:51:37 +0000] "GET /public-objects/uploads/placeholder-1200x500.jpg HTTP/1.1" 500 33 "http://84.201.5.238:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+Error searching for public object: Error: PUBLIC_OBJECT_SEARCH_PATHS not set. Create a bucket in 'Object Storage' tool and set PUBLIC_OBJECT_SEARCH_PATHS env var (comma-separated paths).
+    at ObjectStorageService.getPublicObjectSearchPaths (/app/server/objectStorage.ts:50:13)
+    at ObjectStorageService.searchPublicObject (/app/server/objectStorage.ts:72:35)
+    at <anonymous> (/app/server/routes.ts:1806:47)
+176.88.74.220 - - [21/Sep/2025:13:51:42 +0000] "GET /public-objects/uploads/placeholder-1200x500.jpg HTTP/1.1" 500 33 "http://84.201.5.238:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+176.88.74.220 - - [21/Sep/2025:13:51:45 +0000] "GET /api/category-banners/Bilgisayar HTTP/1.1" 404 37 "http://84.201.5.238:5000/category/bilgisayar" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+Error searching for public object: Error: PUBLIC_OBJECT_SEARCH_PATHS not set. Create a bucket in 'Object Storage' tool and set PUBLIC_OBJECT_SEARCH_PATHS env var (comma-separated paths).
+    at ObjectStorageService.getPublicObjectSearchPaths (/app/server/objectStorage.ts:50:13)
+    at ObjectStorageService.searchPublicObject (/app/server/objectStorage.ts:72:35)
+    at <anonymous> (/app/server/routes.ts:1806:47)
+176.88.74.220 - - [21/Sep/2025:13:51:47 +0000] "GET /public-objects/uploads/placeholder-1200x500.jpg HTTP/1.1" 500 33 "http://84.201.5.238:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+Error searching for public object: Error: PUBLIC_OBJECT_SEARCH_PATHS not set. Create a bucket in 'Object Storage' tool and set PUBLIC_OBJECT_SEARCH_PATHS env var (comma-separated paths).
+    at ObjectStorageService.getPublicObjectSearchPaths (/app/server/objectStorage.ts:50:13)
+    at ObjectStorageService.searchPublicObject (/app/server/objectStorage.ts:72:35)
+    at <anonymous> (/app/server/routes.ts:1806:47)
+176.88.74.220 - - [21/Sep/2025:13:51:52 +0000] "GET /public-objects/uploads/placeholder-1200x500.jpg HTTP/1.1" 500 33 "http://84.201.5.238:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+Error searching for public object: Error: PUBLIC_OBJECT_SEARCH_PATHS not set. Create a bucket in 'Object Storage' tool and set PUBLIC_OBJECT_SEARCH_PATHS env var (comma-separated paths).
+    at ObjectStorageService.getPublicObjectSearchPaths (/app/server/objectStorage.ts:50:13)
+    at ObjectStorageService.searchPublicObject (/app/server/objectStorage.ts:72:35)
+    at <anonymous> (/app/server/routes.ts:1806:47)
+176.88.74.220 - - [21/Sep/2025:13:51:57 +0000] "GET /public-objects/uploads/placeholder-1200x500.jpg HTTP/1.1" 500 33 "http://84.201.5.238:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"

@@ -1,0 +1,665 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arçelik Beyaz Eşya - Ana Sayfa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arcelik-red': '#DC2626',
+                        'arcelik-dark-red': '#B91C1C',
+                        'arcelik-light-gray': '#F8F9FA',
+                        'arcelik-medium-gray': '#6B7280',
+                        'arcelik-dark': '#1F2937'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter bg-white">
+    <!-- @COMPONENT: Header [navigation, search, cart] -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <!-- Top Bar -->
+        <div class="bg-arcelik-red text-white text-sm py-2">
+            <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+                <div class="flex space-x-6">
+                    <span data-bind="topbar.serviceInfo">Servis Randevusu</span>
+                    <span data-bind="topbar.magazine">Magazalar</span>
+                    <span data-bind="topbar.support">Destek</span>
+                    <span data-bind="topbar.membership">Üyelik</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-phone text-sm"></i>
+                    <span data-bind="topbar.phone">444 0 888</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="bg-arcelik-red text-white px-4 py-2 rounded-lg font-bold text-xl" data-bind="brand.name">
+                        arçelik
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 text-arcelik-dark hover:text-arcelik-red transition-colors">
+                            <span data-bind="nav.products">Ürünler</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <!-- Mega Menu would appear here -->
+                    </div>
+                    <a href="#" class="text-arcelik-dark hover:text-arcelik-red transition-colors" data-bind="nav.technologies">Teknolojiler</a>
+                    <a href="#" class="text-arcelik-dark hover:text-arcelik-red transition-colors" data-bind="nav.campaigns">Kampanyalar</a>
+                    <a href="#" class="text-arcelik-dark hover:text-arcelik-red transition-colors" data-bind="nav.corporate">Kurumsal</a>
+                    <a href="#" class="text-arcelik-dark hover:text-arcelik-red transition-colors" data-bind="nav.blog">Blog</a>
+                </div>
+
+                <!-- Search and Cart -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search -->
+                    <div class="relative hidden lg:block">
+                        <input type="text" placeholder="Ürün ara..." class="w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-arcelik-red focus:border-transparent" data-mock="true">
+                        <button class="absolute right-3 top-2.5 text-arcelik-medium-gray">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- Cart -->
+                    <button class="relative p-2 text-arcelik-dark hover:text-arcelik-red transition-colors" data-event="click:toggleCart">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-1 -right-1 bg-arcelik-red text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" data-bind="cart.itemCount">3</span>
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="md:hidden p-2 text-arcelik-dark">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: HeroBanner [promotional content] -->
+    <section class="bg-arcelik-red text-white py-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-4" data-bind="hero.title">
+                        Arçelik'ten Geniş Hacimli Buzdolapları Alımına Çiftli Telve hediye!
+                    </h1>
+                    <p class="text-xl mb-6 text-red-100" data-bind="hero.subtitle">
+                        Yeni nesil teknolojilerle donatılmış buzdolaplarında büyük fırsatlar
+                    </p>
+                    <button class="bg-white text-arcelik-red px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-event="click:viewCampaign">
+                        İncele
+                    </button>
+                </div>
+                <div class="lg:w-1/2">
+                    <!-- Hero product showcase with refrigerators -->
+                    <!-- Three modern refrigerators in white, silver and black colors with energy efficiency labels -->
+                    <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Modern refrigerators showcase" class="w-full h-auto rounded-lg" />
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-4 right-4 text-sm text-red-100" data-bind="campaign.validity">
+            Kampanya, 16-31 Ağustos 2025 tarihleri arasında geçerlidir.
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroBanner -->
+
+    <!-- @COMPONENT: CategoryNavigation [product categories] -->
+    <section class="py-8 bg-arcelik-light-gray">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- @MAP: categories.map(category => ( -->
+                <div class="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow cursor-pointer group" data-event="click:navigateToCategory">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-arcelik-light-gray rounded-full flex items-center justify-center group-hover:bg-arcelik-red group-hover:text-white transition-colors">
+                        <i class="fas fa-snowflake text-2xl text-arcelik-red group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-arcelik-dark group-hover:text-arcelik-red transition-colors" data-bind="category.name">Buzdolabı</h3>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow cursor-pointer group" data-event="click:navigateToCategory">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-arcelik-light-gray rounded-full flex items-center justify-center group-hover:bg-arcelik-red group-hover:text-white transition-colors">
+                        <i class="fas fa-tshirt text-2xl text-arcelik-red group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-arcelik-dark group-hover:text-arcelik-red transition-colors" data-bind="category.name">Çamaşır Makinesi</h3>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow cursor-pointer group" data-event="click:navigateToCategory">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-arcelik-light-gray rounded-full flex items-center justify-center group-hover:bg-arcelik-red group-hover:text-white transition-colors">
+                        <i class="fas fa-burn text-2xl text-arcelik-red group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-arcelik-dark group-hover:text-arcelik-red transition-colors" data-bind="category.name">Fırın</h3>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow cursor-pointer group" data-event="click:navigateToCategory">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-arcelik-light-gray rounded-full flex items-center justify-center group-hover:bg-arcelik-red group-hover:text-white transition-colors">
+                        <i class="fas fa-blender text-2xl text-arcelik-red group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-arcelik-dark group-hover:text-arcelik-red transition-colors" data-bind="category.name">Mutfak Robot</h3>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow cursor-pointer group" data-event="click:navigateToCategory">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-arcelik-light-gray rounded-full flex items-center justify-center group-hover:bg-arcelik-red group-hover:text-white transition-colors">
+                        <i class="fas fa-wind text-2xl text-arcelik-red group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-arcelik-dark group-hover:text-arcelik-red transition-colors" data-bind="category.name">Klima</h3>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow cursor-pointer group" data-event="click:navigateToCategory">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-arcelik-light-gray rounded-full flex items-center justify-center group-hover:bg-arcelik-red group-hover:text-white transition-colors">
+                        <i class="fas fa-broom text-2xl text-arcelik-red group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-arcelik-dark group-hover:text-arcelik-red transition-colors" data-bind="category.name">Süpürge</h3>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CategoryNavigation -->
+
+    <!-- @COMPONENT: FeaturedProducts [product showcase] -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-arcelik-dark mb-4" data-bind="section.title">Öne Çıkan Ürünler</h2>
+                <p class="text-arcelik-medium-gray text-lg" data-bind="section.subtitle">En popüler ve yenilikçi Arçelik ürünleri</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- @MAP: featuredProducts.map(product => ( -->
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer group" data-event="click:viewProduct">
+                    <div class="relative">
+                        <!-- Modern stainless steel refrigerator in kitchen setting -->
+                        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Arçelik Buzdolabı" class="w-full h-48 object-cover rounded-t-lg" />
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold" data-bind="product.energyRating">A+++</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow">
+                                <i class="fas fa-heart text-arcelik-medium-gray hover:text-arcelik-red transition-colors"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-arcelik-dark mb-2 group-hover:text-arcelik-red transition-colors" data-bind="product.name">Arçelik 270320 MB A++ Buzdolabı</h3>
+                        <p class="text-arcelik-medium-gray text-sm mb-3" data-bind="product.description">545 Lt Geniş Hacim, NF Teknoloji</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-2xl font-bold text-arcelik-red" data-bind="product.price">₺12.499</span>
+                                <span class="text-sm text-arcelik-medium-gray line-through ml-2" data-bind="product.oldPrice">₺14.999</span>
+                            </div>
+                            <button class="bg-arcelik-red text-white px-4 py-2 rounded-lg hover:bg-arcelik-dark-red transition-colors" data-event="click:addToCart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer group" data-event="click:viewProduct">
+                    <div class="relative">
+                        <!-- Modern front-loading washing machine in white -->
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Arçelik Çamaşır Makinesi" class="w-full h-48 object-cover rounded-t-lg" />
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold" data-bind="product.energyRating">A+++</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow">
+                                <i class="fas fa-heart text-arcelik-medium-gray hover:text-arcelik-red transition-colors"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-arcelik-dark mb-2 group-hover:text-arcelik-red transition-colors" data-bind="product.name">Arçelik 9123 YP Çamaşır Makinesi</h3>
+                        <p class="text-arcelik-medium-gray text-sm mb-3" data-bind="product.description">9 Kg Kapasiteli, 1200 Devir</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-2xl font-bold text-arcelik-red" data-bind="product.price">₺8.999</span>
+                                <span class="text-sm text-arcelik-medium-gray line-through ml-2" data-bind="product.oldPrice">₺10.499</span>
+                            </div>
+                            <button class="bg-arcelik-red text-white px-4 py-2 rounded-lg hover:bg-arcelik-dark-red transition-colors" data-event="click:addToCart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer group" data-event="click:viewProduct">
+                    <div class="relative">
+                        <!-- Modern built-in kitchen oven with black glass front -->
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300" alt="Arçelik Fırın" class="w-full h-48 object-cover rounded-t-lg" />
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold" data-bind="product.energyRating">A+</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow">
+                                <i class="fas fa-heart text-arcelik-medium-gray hover:text-arcelik-red transition-colors"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-arcelik-dark mb-2 group-hover:text-arcelik-red transition-colors" data-bind="product.name">Arçelik OF 8679 B Ankastre Fırın</h3>
+                        <p class="text-arcelik-medium-gray text-sm mb-3" data-bind="product.description">8 Fonksiyon, Turbo Fan</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-2xl font-bold text-arcelik-red" data-bind="product.price">₺4.299</span>
+                                <span class="text-sm text-arcelik-medium-gray line-through ml-2" data-bind="product.oldPrice">₺4.999</span>
+                            </div>
+                            <button class="bg-arcelik-red text-white px-4 py-2 rounded-lg hover:bg-arcelik-dark-red transition-colors" data-event="click:addToCart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer group" data-event="click:viewProduct">
+                    <div class="relative">
+                        <!-- Modern vacuum cleaner in red and black design -->
+                        <img src="https://pixabay.com/get/gaa05d2c5c505e121ee7e9aa489e7faf039897fdaef24fec30307a186d2d4deb561901bcd5bc9424a50420ff2c9bf7005b25babb9f98fe93e17743a94fed9dda3_1280.jpg" alt="Arçelik Süpürge" class="w-full h-48 object-cover rounded-t-lg" />
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-arcelik-red text-white px-2 py-1 rounded text-xs font-semibold" data-bind="product.badge">YENİ</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow">
+                                <i class="fas fa-heart text-arcelik-medium-gray hover:text-arcelik-red transition-colors"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-arcelik-dark mb-2 group-hover:text-arcelik-red transition-colors" data-bind="product.name">Arçelik S 8355 YS Süpürge</h3>
+                        <p class="text-arcelik-medium-gray text-sm mb-3" data-bind="product.description">Torbasız, HEPA Filtre</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-2xl font-bold text-arcelik-red" data-bind="product.price">₺1.899</span>
+                                <span class="text-sm text-arcelik-medium-gray line-through ml-2" data-bind="product.oldPrice">₺2.299</span>
+                            </div>
+                            <button class="bg-arcelik-red text-white px-4 py-2 rounded-lg hover:bg-arcelik-dark-red transition-colors" data-event="click:addToCart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="bg-arcelik-red text-white px-8 py-3 rounded-lg hover:bg-arcelik-dark-red transition-colors font-semibold" data-event="click:viewAllProducts">
+                    Tüm Ürünleri Görüntüle
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: FeaturedProducts -->
+
+    <!-- @COMPONENT: TechnologySection [innovation showcase] -->
+    <section class="py-16 bg-arcelik-light-gray">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-arcelik-dark mb-4" data-bind="section.title">Arçelik Teknolojileri</h2>
+                <p class="text-arcelik-medium-gray text-lg" data-bind="section.subtitle">Hayatınızı kolaylaştıran yenilikçi çözümler</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-xl transition-shadow">
+                    <div class="w-20 h-20 bg-arcelik-red rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-arcelik-dark mb-4" data-bind="technology.title">Enerji Tasarrufu</h3>
+                    <p class="text-arcelik-medium-gray" data-bind="technology.description">A+++ enerji sınıfı ürünlerle elektrik faturanızı azaltın.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-xl transition-shadow">
+                    <div class="w-20 h-20 bg-arcelik-red rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-wifi text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-arcelik-dark mb-4" data-bind="technology.title">Akıllı Bağlantı</h3>
+                    <p class="text-arcelik-medium-gray" data-bind="technology.description">HomeWhiz uygulaması ile ürünlerinizi uzaktan kontrol edin.</p>
+                </div>
+
+                <div class="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-xl transition-shadow">
+                    <div class="w-20 h-20 bg-arcelik-red rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-arcelik-dark mb-4" data-bind="technology.title">Uzun Ömürlü</h3>
+                    <p class="text-arcelik-medium-gray" data-bind="technology.description">ProSmart Inverter motor teknolojisi ile 10 yıl garanti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TechnologySection -->
+
+    <!-- @COMPONENT: CampaignBanner [promotional section] -->
+    <section class="py-16 bg-gradient-to-r from-arcelik-red to-arcelik-dark-red text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-2/3 mb-8 lg:mb-0">
+                    <h2 class="text-4xl font-bold mb-4" data-bind="campaign.title">Özel Kampanya Fırsatları</h2>
+                    <p class="text-xl mb-6 text-red-100" data-bind="campaign.description">
+                        Seçili beyaz eşya ürünlerinde %30'a varan indirim! Ayrıca 24 aya varan taksit imkanı.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-arcelik-red px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-event="click:viewCampaigns">
+                            Kampanyaları İncele
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-arcelik-red transition-colors" data-event="click:calculateInstallment">
+                            Taksit Hesapla
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:w-1/3">
+                    <!-- Modern home interior with appliances integrated beautifully -->
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400" alt="Modern kitchen interior" class="rounded-lg w-full h-auto" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CampaignBanner -->
+
+    <!-- @COMPONENT: TestimonialSection [customer reviews] -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-arcelik-dark mb-4" data-bind="section.title">Müşteri Yorumları</h2>
+                <p class="text-arcelik-medium-gray text-lg" data-bind="section.subtitle">Arçelik ürünleri hakkında müşterilerimizin düşünceleri</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- @MAP: testimonials.map(testimonial => ( -->
+                <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-arcelik-red">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-arcelik-medium-gray text-sm" data-bind="rating.value">5.0</span>
+                    </div>
+                    <p class="text-arcelik-dark mb-4" data-bind="testimonial.text" data-mock="true">
+                        "Arçelik buzdolabımı 3 yıldır kullanıyorum. Hem enerji tasarrufu hem de geniş hacmi ile çok memnunum. Servisi de harika!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-arcelik-red rounded-full flex items-center justify-center text-white font-semibold">
+                            A
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-semibold text-arcelik-dark" data-bind="customer.name" data-mock="true">Ayşe K.</p>
+                            <p class="text-arcelik-medium-gray text-sm" data-bind="customer.location" data-mock="true">İstanbul</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-arcelik-red">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-arcelik-medium-gray text-sm" data-bind="rating.value">5.0</span>
+                    </div>
+                    <p class="text-arcelik-dark mb-4" data-bind="testimonial.text" data-mock="true">
+                        "Çamaşır makinesi çok sessiz çalışıyor. Gece bile rahatlıkla kullanabiliyorum. Yıkama kalitesi de mükemmel."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-arcelik-red rounded-full flex items-center justify-center text-white font-semibold">
+                            M
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-semibold text-arcelik-dark" data-bind="customer.name" data-mock="true">Mehmet Y.</p>
+                            <p class="text-arcelik-medium-gray text-sm" data-bind="customer.location" data-mock="true">Ankara</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-arcelik-red">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-arcelik-medium-gray text-sm" data-bind="rating.value">5.0</span>
+                    </div>
+                    <p class="text-arcelik-dark mb-4" data-bind="testimonial.text" data-mock="true">
+                        "Fırının teknolojisi gerçekten etkileyici. Yemekler hem hızlı hem de eşit şekilde pişiyor. Tavsiye ederim!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-arcelik-red rounded-full flex items-center justify-center text-white font-semibold">
+                            F
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-semibold text-arcelik-dark" data-bind="customer.name" data-mock="true">Fatma S.</p>
+                            <p class="text-arcelik-medium-gray text-sm" data-bind="customer.location" data-mock="true">İzmir</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TestimonialSection -->
+
+    <!-- @COMPONENT: Footer [site information and links] -->
+    <footer class="bg-arcelik-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="bg-arcelik-red text-white px-4 py-2 rounded-lg font-bold text-xl mb-6 inline-block" data-bind="brand.name">
+                        arçelik
+                    </div>
+                    <p class="text-gray-300 mb-4" data-bind="company.description">
+                        Türkiye'nin öncü beyaz eşya markası olarak, 70 yıldır evlerinize kalite ve teknoloji getiriyoruz.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6" data-bind="footer.section.products">Ürünler</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Buzdolabı</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Çamaşır Makinesi</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Bulaşık Makinesi</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Fırın</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Klima</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Süpürge</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6" data-bind="footer.section.support">Destek</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Servis Randevusu</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Kullanım Kılavuzları</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Garanti Sorgulama</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Yedek Parça</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">SSS</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6" data-bind="footer.section.company">Kurumsal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Hakkımızda</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Sürdürülebilirlik</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Kariyer</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Basın</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Yatırımcı İlişkileri</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.link">Mağazalar</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-600 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300" data-bind="footer.copyright">
+                        © 2025 Arçelik A.Ş. Tüm hakları saklıdır.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.legal">Gizlilik Politikası</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.legal">Kullanım Şartları</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors" data-bind="footer.legal">Çerez Politikası</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @COMPONENT: CartSidebar [shopping cart overlay] -->
+    <!-- @STATE: cartOpen:boolean = false -->
+    <div id="cartSidebar" class="fixed inset-y-0 right-0 w-96 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 hidden" data-functionality="Shopping cart sidebar">
+        <div class="h-full flex flex-col">
+            <div class="flex items-center justify-between p-6 border-b">
+                <h2 class="text-xl font-semibold text-arcelik-dark" data-bind="cart.title">Sepetim</h2>
+                <button class="text-arcelik-medium-gray hover:text-arcelik-dark" data-event="click:closeCart">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto p-6">
+                <!-- Cart items would be mapped here -->
+                <div class="space-y-4" data-mock="true">
+                    <div class="flex items-center space-x-4 p-4 border rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Product" class="w-16 h-16 object-cover rounded" />
+                        <div class="flex-1">
+                            <h3 class="font-medium text-arcelik-dark">Arçelik Buzdolabı</h3>
+                            <p class="text-arcelik-medium-gray text-sm">₺12.499</p>
+                            <div class="flex items-center mt-2">
+                                <button class="w-8 h-8 rounded-full border flex items-center justify-center">-</button>
+                                <span class="mx-3">1</span>
+                                <button class="w-8 h-8 rounded-full border flex items-center justify-center">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-semibold text-arcelik-dark">Toplam:</span>
+                    <span class="text-xl font-bold text-arcelik-red" data-bind="cart.total">₺12.499</span>
+                </div>
+                <button class="w-full bg-arcelik-red text-white py-3 rounded-lg font-semibold hover:bg-arcelik-dark-red transition-colors" data-event="click:proceedToCheckout">
+                    Sepeti Onayla
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: CartSidebar -->
+
+    <script>
+        (function() {
+            // TODO: Implement React state management and component logic
+            // This is placeholder JavaScript for demonstration purposes only
+            
+            // Cart functionality
+            const cartButton = document.querySelector('[data-event="click:toggleCart"]');
+            const cartSidebar = document.getElementById('cartSidebar');
+            const closeCartButton = document.querySelector('[data-event="click:closeCart"]');
+
+            if (cartButton && cartSidebar) {
+                cartButton.addEventListener('click', function() {
+                    cartSidebar.classList.remove('hidden');
+                    setTimeout(() => {
+                        cartSidebar.classList.remove('translate-x-full');
+                    }, 10);
+                });
+            }
+
+            if (closeCartButton && cartSidebar) {
+                closeCartButton.addEventListener('click', function() {
+                    cartSidebar.classList.add('translate-x-full');
+                    setTimeout(() => {
+                        cartSidebar.classList.add('hidden');
+                    }, 300);
+                });
+            }
+
+            // Add to cart buttons
+            const addToCartButtons = document.querySelectorAll('[data-event="click:addToCart"]');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    // TODO: Implement add to cart functionality
+                    console.log('Add to cart clicked');
+                });
+            });
+
+            // Product view handlers
+            const productCards = document.querySelectorAll('[data-event="click:viewProduct"]');
+            productCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // TODO: Navigate to product detail page
+                    console.log('View product clicked');
+                });
+            });
+
+            // Category navigation
+            const categoryCards = document.querySelectorAll('[data-event="click:navigateToCategory"]');
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // TODO: Navigate to category page
+                    console.log('Category navigation clicked');
+                });
+            });
+
+            // Heart/wishlist buttons
+            const heartButtons = document.querySelectorAll('.fa-heart');
+            heartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.classList.toggle('fas');
+                    this.classList.toggle('far');
+                    this.classList.toggle('text-arcelik-red');
+                    // TODO: Implement wishlist functionality
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
